@@ -4,6 +4,6 @@ export const Products = {
     CompanyId: 'int',
 		productId: 'int',
 		name: { type: 'string', indexed: true },
-		price: 'int?',
+		price: 'float?',
   }
 };
