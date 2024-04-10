@@ -1,10 +1,35 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import {
+  StyleSheet,
+  Text,
+  View,
+  Button,
+} from 'react-native';
+
+import {
+  resetDatabase,
+} from './src/realm';
+
+
+function randomData() {
+  console.info('generating random data');
+}
+
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
+      <Text>Realm without hooks</Text>
+      <Button
+        onPress={() => resetDatabase()}
+        title="ResetDB"
+        color="#841584"
+      />
+      <Button
+        onPress={() => randomData()}
+        title="RandomData"
+        color="#841584"
+      />
       <StatusBar style="auto" />
     </View>
   );
